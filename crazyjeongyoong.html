@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.label_content input{display:none;}
+.label_content input + label {}
+.label_content input + label + div{
+  display:none;
+}
+.label_content input:checked + label + div{display:block;}
+.label_content input + label + div label{
+  position:absoulte;
+  bottom:0;
+  left:50%;
+  background:#333;
+  color:#fff;
+  padding: 20px;
+}
+.card1{
+  text-align: center;
+  padding-top:80px;
+  padding-bottom:80px;
+}
+.phonenumber{
+  color:white;
+  border: 1px solid rgba(1,50,82,255);
+  height: 150px;
+  width: 100%;
+  position: fixed;
+  bottom:0;
+  margin: 0px;
+  background-color: rgba(1,50,82,255)
+}
+p{
+  margin: 0px;
+}
+h1{
+  padding-bottom: 50px;
+}
+</style>
+    <body>
+      <div class = "card1">
+      <div class ="label_content">
+          <input type ="checkbox" id="info">
+          <label for ="info"><h1><img src="jeongyoongcompany.png" width ="40%"></h1></label>
+        <div class ="content">
+          <label for = "info">
+            <video width="600" controls>
+              <source src="JY_introduce.mp4" type="video/mp4">
+          </label>
+        </div>
+    </div>
+    <div>
+      <h1><a href="layoutpop3.html"><img src="주전부리부리.png" width="40%"></a></h1>
+    </div>
+      </div>
+
+      <div class = "phonenumber">
+        <p><h3>문의 번호</h3></p>
+        <p><h4>안녕하신가 내 이름은 사용 설명서</h4></p>
+      </div>
+    </footer>
+
+  </body>
+</head>
+</html>

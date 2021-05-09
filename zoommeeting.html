@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  h3{
+    text-align: center;
+
+  }
+  .head{
+    text-align:center;
+    border-bottom:1px solid black;
+  }
+  input[id="menuicon"]{
+  display:none;
+  }
+  div[class ="sidebar"]{
+  width:500px;
+  height:77.5%;
+  background:#222;
+  position:absolute;
+  top:0;
+  left:-500px;
+  z-index:1;
+  transition:all .35s;
+  }
+
+  input[id="menuicon"]:checked + label + div
+  {
+  left:0;
+  }
+  #next{
+  text-align:right;
+  }
+  h1{
+    text-align: center;
+    color:white;
+  }
+  .phonenumber{
+    color:white;
+    border: 1px solid rgba(1,50,82,255);
+    height: 150px;
+    width: 100%;
+    position: fixed;
+    bottom:0;
+    margin: 0px;
+    background-color: rgba(1,50,82,255)
+  }
+  </style>
+      <body>
+        <div class = "head">
+          <span><a href="layoutpop3.html"><img src="jeongyoongcompany.png" width = "50%"></a></span>
+          <input type ="checkbox" id="menuicon">
+            <label for="menuicon">
+              <span id="next"><img src ="information.png"></span>
+            </label>
+              <div class ="sidebar">
+                <h1>안녕하신가하신가하신가하신가<br>
+                    노래나 배우십쇼
+                </h1>
+              </div>
+        </div>
+    <h3> 강사 14:00 ~ 15:00</h3>
+    <h3><img src ="노래를배웁니다.PNG" width = "60%"></h3>
+
+    <footer>
+    <div class = "phonenumber">
+        <p><h2>문의 번호</h2></p>
+        <p><h4>안녕하신가 내 이름은 사용 설명서</h4></p>
+      </div>
+    </footer>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/6065435ef7ce18270935ff44/1f25ouaup';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+</body>
+</head>
+</html>
