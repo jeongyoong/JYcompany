@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+	<title>슬라이드</title>
+<style>
+.head{
+  text-align:center;
+  border-bottom:1px solid black;
+}
+
+input[id="menuicon"]{
+display:none;
+}
+div[class ="sidebar"]{
+width:300px;
+height:77.5%;
+background:#222;
+position:absolute;
+top:0;
+left:-300px;
+z-index:1;
+transition:all .35s;
+}
+
+input[id="menuicon"]:checked + label + div
+{
+left:0;
+}
+#next{
+text-align:right;
+}
+h1{
+  text-align: center;
+  color:white;
+}
+    h3{
+      text-align: center;
+    }
+    * {margin:0;padding:0;}
+  	.section input[id*="slide"] {display:none;}
+  	.section .slidewrap {max-width:1200px;margin:0 auto;}
+  	.section .slidelist {white-space:nowrap;font-size:0;overflow:hidden;position:relative;}
+  	.section .slidelist > li {display:inline-block;vertical-align:middle;width:100%;transition:all .5s;}
+  	.section .slidelist > li > a {display:block;position:relative;}
+  	.section .slidelist > li > a img {width:100%;}
+  	.section .slidelist label {position:absolute;z-index:10;top:50%;transform:translateY(-50%);padding:50px;cursor:pointer;}
+  	.section .slidelist .textbox {position:absolute;z-index:1;top:50%;left:50%;transform:translate(-50%,-50%);line-height:1.6;text-align:center;}
+  	.section .slidelist .textbox h3 {font-size:36px;color:#fff;;transform:translateY(30px);transition:all .5s;}
+  	.section .slidelist .textbox p {font-size:16px;color:#fff;opacity:0;transform:translateY(30px);transition:all .5s;}
+
+
+  	.section input[id="slide01"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+  	.section input[id="slide02"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+  	.section input[id="slide03"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+
+
+  	.slide-control > div {display:none;}
+  	.section .left {left:5px;background:url('./img/left.png') center center / 100% no-repeat;}
+  	.section .right {right:5px;background:url('./img/right.png') center center / 100% no-repeat;}
+  	.section input[id="slide01"]:checked ~ .slidewrap .slide-control > div:nth-child(1) {display:block;}
+  	.section input[id="slide02"]:checked ~ .slidewrap .slide-control > div:nth-child(2) {display:block;}
+  	.section input[id="slide03"]:checked ~ .slidewrap .slide-control > div:nth-child(3) {display:block;}
+
+  	.slide-pagelist {text-align:center;padding:20px;}
+  	.slide-pagelist > li {display:inline-block;vertical-align:middle;}
+  	.slide-pagelist > li > label {display:block;padding:8px 30px;border-radius:30px;background:#ccc;margin:20px 10px;cursor:pointer;}
+  	.section input[id="slide01"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(1) > label {background:#999;}
+  	.section input[id="slide02"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(2) > label {background:#999;}
+  	.section input[id="slide03"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(3) > label {background:#999;}
+
+</style>
+    <body>
+      <div class = "head">
+        <span><a href="layoutpop3.html"><img src="jeongyoongcompany.png" width = "50%"></a></span>
+        <input type ="checkbox" id="menuicon">
+          <label for="menuicon">
+            <span id="next"><img src ="information.png"></span>
+          </label>
+            <div class ="sidebar">
+              <h1>안녕하신가하신가하신가하신가<br>
+                  게시물을 올려봐요!<br>
+                  문의번호:
+              </h1>
+            </div>
+      </div>
+
+    <div class="section">
+    	<input type="radio" name="slide" id="slide01" checked>
+    	<input type="radio" name="slide" id="slide02">
+    	<input type="radio" name="slide" id="slide03">
+    	<div class="slidewrap">
+
+    		<ul class="slidelist">
+
+    			<li class="slideitem">
+    				<a>
+    					<div class="textbox">
+    						<h3></h3>
+    						<p></p>
+    					</div>
+    					<a href="next.html"><img src="송가인_노래를배웁시다.png"></a>
+    				</a>
+    			</li>
+    			<li class="slideitem">
+    				<a>
+
+    					<div class="textbox">
+    						<h3></h3>
+    						<p></p>
+    					</div>
+    					<a href="next.html"><img src="가야금.png"></a>
+    				</a>
+    			</li>
+    			<li class="slideitem">
+    				<a>
+
+    					<div class="textbox">
+    						<h3></h3>
+    						<p></p>
+    					</div>
+    					<a href="next.html"><img src="오늘도.png"></a>
+    				</a>
+    			</li class="slideitem">
+
+
+    			<div class="slide-control">
+    				<div>
+    					<label for="slide03" class="left"></label>
+    					<label for="slide02" class="right"></label>
+    				</div>
+    				<div>
+    					<label for="slide01" class="left"></label>
+    					<label for="slide03" class="right"></label>
+    				</div>
+    				<div>
+    					<label for="slide02" class="left"></label>
+    					<label for="slide01" class="right"></label>
+    				</div>
+    			</div>
+
+    		</ul>
+
+    		<ul class="slide-pagelist">
+    			<li><label for="slide01"></label></li>
+    			<li><label for="slide02"></label></li>
+    			<li><label for="slide03"></label></li>
+    		</ul>
+    	</div>
+    </div>
+
+
+    <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://jeong-yoong.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  </body>
+</head>
+</html>
