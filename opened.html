@@ -1,0 +1,71 @@
+<head>
+  <style>
+    .first{
+      text-align:center;
+    }
+    .second{
+    text-align:center;
+    padding-top:100px;
+    }
+    h1{
+      text-align:center;
+      margin:0px;
+    }
+    .firstText{
+      padding-top:100px;
+    }
+    .label_content input{display:none;}
+    .label_content input + label {}
+    .label_content input + label + div{
+      display:none;
+    }
+    .label_content input:checked + label + div{display:block;}
+    .label_content input + label + div label{
+      position:absoulte;
+      bottom:0;
+      left:50%;
+      background:#333;
+      color:#fff;
+      padding: 20px;
+    }
+    .phonenumber{
+      color:white;
+      border: 1px solid rgba(1,50,82,255);
+      height: 150px;
+      width: 100%;
+      position: fixed;
+      bottom:0;
+      margin: 0px;
+      background-color: rgba(1,50,82,255)
+}
+    </style>
+    </head>
+<body>
+  <h1 class="firstText">주전부리 서비스에 오신 것을 환영합니다.</h1><br>
+  <h1>기존 사용자는 핸드폰 사진을 눌러 주전부리에 입장하시고<br>처음 사용자는 재생 버튼을 눌러 사용 영상을 확인해주세요</h1>
+
+  <div class ="first">
+    <div class ="label_content">
+          <input type ="checkbox" id="info">
+          <label for ="info"><img src="playbutton.png" width ="30%"></label>
+        <div class ="content">
+            <label for = "info">
+              <video width="600px" controls>
+              <source src="JY_introduce.mp4" type="video/mp4">
+            </label>
+          </div>
+    </div>
+  </div>
+
+  <div class = "second">
+  <a href="layoutpop3.html"><h2><img src= "handphone.png" width="35%"></h2>
+  </a>
+  </div>
+
+  <footer>
+      <div class = "phonenumber">
+        <h3>문의 번호</h3>
+        <h4>안녕하신가 내 이름은 사용 설명서</h4>
+      </div>
+    </footer>
+  </body>
